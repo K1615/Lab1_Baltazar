@@ -3,81 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detailed Hero Section</title>
+    <title>North & Pine | Everyday objects, thoughtfully made</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
-        <nav>
-            <a href="#"><strong>BrandLogo</strong></a>
-            <ul>
-                <li><a href="#product">Product</a></li>
-                <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#resources">Resources</a></li>
-            </ul>
-            <div class="auth-buttons">
-                <a href="#login" class="btn-secondary">Log In</a>
-                <a href="#signup" class="btn-primary">Sign Up</a>
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="#top" aria-label="North and Pine home">
+                <span class="brand-mark">N</span>
+                <span>north<span class="brand-accent">&</span>pine</span>
+            </a>
+            <div class="nav-links">
+                <a href="#shop">Shop</a>
+                <a href="#story">Our story</a>
+                <a href="#journal">Journal</a>
+            </div>
+            <div class="nav-actions">
+                <label class="search-box" for="search-input">
+                    <span aria-hidden="true">⌕</span>
+                    <input id="search-input" type="search" placeholder="Search products" aria-label="Search products">
+                </label>
+                <button class="icon-button cart-button" id="cart-button" aria-label="Open shopping bag">
+                    <span aria-hidden="true">♧</span>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <div class="badge-banner">
-                    <span class="badge">New Feature</span>
-                    <a href="#announcement">Explore our v2.0 update &rarr;</a>
-                </div>
-
-                <h1>Scale Your Development Workflow Without the Friction</h1>
-                <p class="subheadline">Automate deployment pipelines, collaborate with your team in real time, and deliver production-ready software up to 10x faster.</p>
-                
-                <div class="cta-group">
-                    <form id="signup-form" class="email-form">
-                        <input type="email" placeholder="Enter your work email..." required>
-                        <button type="submit" class="btn-primary">Start Free Trial</button>
-                    </form>
-                    <a href="#" id="watch-demo-btn" class="btn-demo">
-                        <span>&#9654;</span> Watch 2-Min Demo
-                    </a>
-                </div>
-
-                <ul class="key-benefits">
-                    <li>&#10003; No credit card required</li>
-                    <li>&#10003; 14-day free trial</li>
-                    <li>&#10003; Cancel anytime</li>
-                </ul>
-
-                <div class="social-proof">
-                    <p>Trusted by 10,000+ teams worldwide</p>
-                    <ul class="logo-grid">
-                        <li>Acme Corp</li>
-                        <li>GlobalTech</li>
-                        <li>Starlight</li>
-                        <li>Nexus</li>
-                    </ul>
-                </div>
+    <main id="top">
+        <section class="hero container">
+            <div class="hero-copy">
+                <p class="eyebrow">Small things, well made</p>
+                <h1>Make room for <em>better</em> everyday.</h1>
+                <p class="hero-text">Considered goods for a calmer home and a more intentional life. Designed to last, made to be loved.</p>
+                <a class="button button-dark" href="#shop">Shop the collection <span>→</span></a>
+                <div class="hero-note"><span>✦</span> Free shipping on orders over $75</div>
             </div>
-
-            <div class="hero-media">
-                <figure>
-                    <img src="https://via.placeholder.com/800x500" alt="Dashboard preview showing analytics and user controls">
-                </figure>
+            <div class="hero-art" aria-label="A curated collection of home goods">
+                <div class="sun-shape"></div>
+                <div class="hero-card card-one"><span>☕</span></div>
+                <div class="hero-card card-two"><span>◒</span></div>
+                <div class="hero-card card-three"><span>✿</span></div>
+                <p class="art-caption">Objects with a point of view.</p>
             </div>
+        </section>
+
+        <section class="shop-section container" id="shop">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">The collection</p>
+                    <h2>Good goods, no clutter.</h2>
+                </div>
+                <p class="section-intro">A few of our favorite things, selected for their beauty, utility, and staying power.</p>
+            </div>
+            <div class="shop-toolbar">
+                <div class="category-tabs" role="tablist" aria-label="Product categories">
+                    <button class="category-tab active" data-category="All">All products</button>
+                    <button class="category-tab" data-category="Home">Home</button>
+                    <button class="category-tab" data-category="Desk">Desk</button>
+                    <button class="category-tab" data-category="Wellness">Wellness</button>
+                </div>
+                <label class="sort-control">Sort by
+                    <select id="sort-select" aria-label="Sort products">
+                        <option value="featured">Featured</option>
+                        <option value="low">Price: low to high</option>
+                        <option value="high">Price: high to low</option>
+                    </select>
+                </label>
+            </div>
+            <div class="product-grid" id="product-grid"></div>
+            <p class="empty-state" id="empty-state" hidden>No products found. Try a different search.</p>
+        </section>
+
+        <section class="story container" id="story">
+            <div class="story-image"><span>✦</span></div>
+            <div class="story-copy">
+                <p class="eyebrow">A slower way to shop</p>
+                <h2>Less, but better.</h2>
+                <p>North & Pine is a small independent shop built around the belief that the objects we live with should bring a little joy. We work with thoughtful makers and choose pieces that earn their place in your home.</p>
+                <a class="text-link" href="#journal">Read our story <span>→</span></a>
+            </div>
+        </section>
+
+        <section class="newsletter container" id="journal">
+            <div><p class="eyebrow">The good list</p><h2>Notes on living well.</h2></div>
+            <form id="newsletter-form" class="newsletter-form">
+                <label class="sr-only" for="newsletter-email">Email address</label>
+                <input id="newsletter-email" type="email" placeholder="Your email address" required>
+                <button class="button button-dark" type="submit">Subscribe <span>→</span></button>
+            </form>
+            <p class="form-message" id="form-message" role="status"></p>
         </section>
     </main>
 
-    <div id="demo-modal" class="modal">
-        <div class="modal-content">
-            <span id="close-modal" class="close-btn">&times;</span>
-            <h2>Product Demo</h2>
-            <p>Interactive video placeholder for the 2-minute demo.</p>
+    <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true">
+        <div class="drawer-header"><div><p class="eyebrow">Your selection</p><h2 id="cart-title">Shopping bag</h2></div><button class="close-button" id="close-cart" aria-label="Close shopping bag">×</button></div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total"><span>Subtotal</span><strong id="cart-total">$0.00</strong></div>
+            <p class="shipping-note">Shipping and taxes calculated at checkout.</p>
+            <button class="button button-dark checkout-button" id="checkout-button">Checkout <span>→</span></button>
         </div>
-    </div>
-
+    </aside>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <div class="toast" id="toast" role="status"></div>
     <script src="app.js"></script>
 </body>
 </html>
