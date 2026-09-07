@@ -3,79 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detailed Hero Section Template</title>
+    <title>Detailed Hero Section</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <nav>
             <a href="#"><strong>BrandLogo</strong></a>
-            
             <ul>
                 <li><a href="#product">Product</a></li>
                 <li><a href="#solutions">Solutions</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#resources">Resources</a></li>
             </ul>
-
-            <div>
-                <a href="#login">Log In</a>
-                <a href="#signup">Sign Up</a>
+            <div class="auth-buttons">
+                <a href="#login" class="btn-secondary">Log In</a>
+                <a href="#signup" class="btn-primary">Sign Up</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <section>
-            <div>
-                <div>
-                    <span>New Feature</span>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="badge-banner">
+                    <span class="badge">New Feature</span>
                     <a href="#announcement">Explore our v2.0 update &rarr;</a>
                 </div>
 
                 <h1>Scale Your Development Workflow Without the Friction</h1>
+                <p class="subheadline">Automate deployment pipelines, collaborate with your team in real time, and deliver production-ready software up to 10x faster.</p>
                 
-                <p>
-                    Automate deployment pipelines, collaborate with your team in real time, 
-                    and deliver production-ready software up to 10x faster.
-                </p>
-                
-                <div>
-                    <form action="#start-free-trial" method="POST">
+                <div class="cta-group">
+                    <form id="signup-form" class="email-form">
                         <input type="email" placeholder="Enter your work email..." required>
-                        <button type="submit">Start Free Trial</button>
+                        <button type="submit" class="btn-primary">Start Free Trial</button>
                     </form>
-                    
-                    <a href="#demo-video">
+                    <a href="#" id="watch-demo-btn" class="btn-demo">
                         <span>&#9654;</span> Watch 2-Min Demo
                     </a>
                 </div>
 
-                <div>
-                    <p><small>Trusted by 10,000+ teams worldwide</small></p>
-                    <ul>
-                        <li><small>[ Company Logo 1 ]</small></li>
-                        <li><small>[ Company Logo 2 ]</small></li>
-                        <li><small>[ Company Logo 3 ]</small></li>
-                        <li><small>[ Company Logo 4 ]</small></li>
-                    </ul>
-                </div>
-
-                <ul>
+                <ul class="key-benefits">
                     <li>&#10003; No credit card required</li>
                     <li>&#10003; 14-day free trial</li>
                     <li>&#10003; Cancel anytime</li>
                 </ul>
+
+                <div class="social-proof">
+                    <p>Trusted by 10,000+ teams worldwide</p>
+                    <ul class="logo-grid">
+                        <li>Acme Corp</li>
+                        <li>GlobalTech</li>
+                        <li>Starlight</li>
+                        <li>Nexus</li>
+                    </ul>
+                </div>
             </div>
 
-            <div>
+            <div class="hero-media">
                 <figure>
                     <img src="https://via.placeholder.com/800x500" alt="Dashboard preview showing analytics and user controls">
-                    <figcaption>Interactive dashboard preview</figcaption>
                 </figure>
             </div>
         </section>
     </main>
 
+    <div id="demo-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <h2>Product Demo</h2>
+            <p>Interactive video placeholder for the 2-minute demo.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
